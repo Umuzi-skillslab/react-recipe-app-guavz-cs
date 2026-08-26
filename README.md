@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24322030&assignment_repo_type=AssignmentRepo)
 # React_Recipe_App
 
 A local cooking school has partnered with food bloggers to create an interactive recipe discovery and meal planning application. They need a modern, responsive React application that allows users to browse recipes, plan weekly meals, watch cooking tutorials, and save their favorite dishes. You've been hired to build this application from scratch, demonstrating your proficiency in React fundamentals, component architecture, state management, and modern JavaScript practices.
