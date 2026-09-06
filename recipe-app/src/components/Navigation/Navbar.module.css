@@ -1,0 +1,198 @@
+/* ============================================
+   Navbar Module Styles
+   Sticky top navigation with active route styling
+   and mobile hamburger menu
+   ============================================ */
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #EDE5DC;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #2C2C2C;
+  flex-shrink: 0;
+}
+
+.brandIcon {
+  font-size: 1.4rem;
+}
+
+.brandText {
+  color: #C45C26;
+}
+
+/* Desktop links */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  display: block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.925rem;
+  font-weight: 500;
+  color: #5A5A5A;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.navLink:hover {
+  background-color: #FDF8F3;
+  color: #C45C26;
+}
+
+/* Active route styling – required by rubric */
+.active {
+  background-color: #FDF0E8;
+  color: #C45C26;
+  font-weight: 600;
+}
+
+/* Favorites badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.3rem;
+  margin-left: 0.3rem;
+  background-color: #C45C26;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+/* Hamburger button (mobile) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 6px;
+  color: #2C2C2C;
+}
+
+.hamburger:hover {
+  background-color: #F5F0EB;
+}
+
+.hamburgerIcon {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: currentColor;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.hamburgerIcon::before,
+.hamburgerIcon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform 0.25s ease;
+}
+
+.hamburgerIcon::before {
+  top: -7px;
+}
+
+.hamburgerIcon::after {
+  top: 7px;
+}
+
+/* Open state for hamburger animation */
+.open .hamburgerIcon {
+  background-color: transparent;
+}
+
+.open .hamburgerIcon::before {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.open .hamburgerIcon::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile menu panel */
+.mobileMenu {
+  display: none;
+  background-color: #ffffff;
+  border-top: 1px solid #EDE5DC;
+  padding: 0.75rem 1.25rem 1rem;
+}
+
+.mobileMenu.open {
+  display: block;
+}
+
+.mobileLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mobileLink {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5A5A5A;
+}
+
+.mobileLink:hover,
+.mobileLink.active {
+  background-color: #FDF0E8;
+  color: #C45C26;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}

@@ -1,9 +1,13 @@
 import { useState } from 'react'
+import Footer from './components/common/Footer'
+import Header from './components/common/Header'
+import Navbar from './components/Navigation/Navbar'
 
 function App() {
   return (
     <>
-      <h1>Testing</h1>
+      <Navbar />
+      <Footer />
     </>
   )
 }
