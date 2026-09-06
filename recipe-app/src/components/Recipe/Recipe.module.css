@@ -1,0 +1,348 @@
+/* ============================================
+   Recipe Module Styles
+   RecipeCard, RecipeList, RecipeDetail, RecipeFilter
+   ============================================ */
+
+/* ---------- RecipeCard ---------- */
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #F5F0EB;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.favoriteBtn {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.favoriteBtn:hover {
+  transform: scale(1.1);
+  background: #fff;
+}
+
+.favoriteActive {
+  color: #C45C26;
+}
+
+.cardBody {
+  padding: 1rem 1.1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.4rem;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: #2C2C2C;
+  line-height: 1.3;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #6B6B6B;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badgeEasy {
+  background-color: #E8F5E9;
+  color: #2E7D32;
+}
+
+.badgeMedium {
+  background-color: #FFF3E0;
+  color: #E65100;
+}
+
+.badgeHard {
+  background-color: #FFEBEE;
+  color: #C62828;
+}
+
+.cardActions {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ---------- RecipeList ---------- */
+.listGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #8A847A;
+}
+
+.emptyState h3 {
+  margin: 0 0 0.5rem;
+  color: #5A5A5A;
+}
+
+/* ---------- RecipeFilter ---------- */
+.filterBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #FDF8F3;
+  border-radius: 12px;
+  border: 1px solid #EDE5DC;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 140px;
+}
+
+.filterLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #8A847A;
+}
+
+.filterSelect {
+  padding: 0.45rem 0.7rem;
+  border: 1.5px solid #E5DDD4;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #fff;
+  color: #2C2C2C;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.filterSelect:focus {
+  border-color: #C45C26;
+}
+
+.clearBtn {
+  margin-left: auto;
+  align-self: flex-end;
+}
+
+/* ---------- RecipeDetail ---------- */
+.detailLayout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.detailMain {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detailHero {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #F5F0EB;
+}
+
+.detailHeroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detailHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detailTitle {
+  margin: 0;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #2C2C2C;
+  line-height: 1.25;
+}
+
+.detailMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #6B6B6B;
+}
+
+.detailMetaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.detailActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid #EDE5DC;
+}
+
+.sectionTitle {
+  margin: 0 0 0.9rem;
+  font-size: 1.1rem;
+  font-weight: 650;
+  color: #2C2C2C;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ingredientsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.ingredientItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: #3A3A3A;
+}
+
+.ingredientCheck {
+  margin-top: 0.15rem;
+  accent-color: #C45C26;
+}
+
+.instructionsList {
+  margin: 0;
+  padding-left: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.instructionItem {
+  font-size: 0.95rem;
+  color: #3A3A3A;
+  line-height: 1.5;
+}
+
+.detailSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: sticky;
+  top: 80px;
+}
+
+.backBtn {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .detailLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .detailSidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .listGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .clearBtn {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .detailTitle {
+    font-size: 1.45rem;
+  }
+}
