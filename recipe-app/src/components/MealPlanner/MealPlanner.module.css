@@ -1,0 +1,230 @@
+/* ============================================
+   MealPlanner Module Styles
+   ============================================ */
+
+.plannerLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Sidebar – favorites quick-add */
+.sidebar {
+  background: #FDF8F3;
+  border-radius: 14px;
+  padding: 1.15rem;
+  border: 1px solid #EDE5DC;
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+.sidebarTitle {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+  font-weight: 650;
+  color: #2C2C2C;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.favItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: #fff;
+  margin-bottom: 0.5rem;
+  border: 1px solid #EDE5DC;
+  cursor: grab;
+  transition: box-shadow 0.15s ease;
+}
+
+.favItem:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.favThumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.favInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.favName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.favMeta {
+  font-size: 0.75rem;
+  color: #8A847A;
+}
+
+.emptyFavs {
+  font-size: 0.85rem;
+  color: #8A847A;
+  text-align: center;
+  padding: 1rem 0.5rem;
+}
+
+/* Main week grid */
+.weekHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.weekTitle {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2C2C2C;
+}
+
+.weekActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.daysGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.75rem;
+}
+
+/* DayCard */
+.dayCard {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #EDE5DC;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dayHeader {
+  background: #FDF8F3;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #C45C26;
+  text-align: center;
+  border-bottom: 1px solid #EDE5DC;
+}
+
+.dayBody {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.mealSlot {
+  background: #FAFAF8;
+  border: 1.5px dashed #E5DDD4;
+  border-radius: 8px;
+  padding: 0.4rem;
+  min-height: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.mealSlotFilled {
+  border-style: solid;
+  border-color: #D4C8B8;
+  background: #fff;
+}
+
+.slotLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #A09A92;
+}
+
+.slotRecipe {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #2C2C2C;
+  line-height: 1.25;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.slotRemove {
+  background: none;
+  border: none;
+  color: #C0392B;
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.slotRemove:hover {
+  color: #922B21;
+}
+
+.slotEmpty {
+  font-size: 0.75rem;
+  color: #B0A99F;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .daysGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .plannerLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .daysGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .daysGrid {
+    grid-template-columns: 1fr;
+  }
+}
