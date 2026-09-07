@@ -40,8 +40,32 @@ const createEmptyMealPlan = () => ({
 function App() {
   // ---------- State ----------
   const [recipes, setRecipes] = useState([]);
-  const [favorites, setFavorites] = useState([]);
-  const [mealPlan, setMealPlan] = useState(createEmptyMealPlan());
+
+  // Lazy initializers: the function passed to useState only runs ONCE,
+  // synchronously, before the first render. This means `favorites` and
+  // `mealPlan` are already correct on render #1 — there's no gap where
+  // they're briefly empty for another effect to accidentally overwrite
+  // (which is what a separate "hydrate on mount" effect would allow).
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      const saved = localStorage.getItem('favorites');
+      return saved ? JSON.parse(saved) : [];
+    } catch (err) {
+      console.error('Failed to load favorites from localStorage:', err);
+      return [];
+    }
+  });
+
+  const [mealPlan, setMealPlan] = useState(() => {
+    try {
+      const saved = localStorage.getItem('mealPlan');
+      return saved ? JSON.parse(saved) : createEmptyMealPlan();
+    } catch (err) {
+      console.error('Failed to load meal plan from localStorage:', err);
+      return createEmptyMealPlan();
+    }
+  });
+
   const [isLoading, setIsLoading] = useState(true);
 
   // ---------- Effects ----------
@@ -57,29 +81,12 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  // 2. Hydrate favorites + mealPlan from localStorage on mount
-  useEffect(() => {
-    try {
-      const savedFavorites = localStorage.getItem('favorites');
-      if (savedFavorites) {
-        setFavorites(JSON.parse(savedFavorites));
-      }
-
-      const savedMealPlan = localStorage.getItem('mealPlan');
-      if (savedMealPlan) {
-        setMealPlan(JSON.parse(savedMealPlan));
-      }
-    } catch (err) {
-      console.error('Failed to load from localStorage:', err);
-    }
-  }, []);
-
-  // 3. Persist favorites whenever they change
+  // 2. Persist favorites whenever they change
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
-  // 4. Persist meal plan whenever it changes
+  // 3. Persist meal plan whenever it changes
   useEffect(() => {
     localStorage.setItem('mealPlan', JSON.stringify(mealPlan));
   }, [mealPlan]);
