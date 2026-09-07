@@ -192,6 +192,7 @@
 
 /* ---------- RecipeDetail ---------- */
 .detailLayout {
+  padding: 1.5rem;
   display: grid;
   grid-template-columns: 1fr 360px;
   gap: 2rem;
