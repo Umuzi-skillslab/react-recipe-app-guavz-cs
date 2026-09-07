@@ -1,0 +1,162 @@
+/* ============================================
+   Shared page-level styles
+   ============================================ */
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+  min-height: 60vh;
+}
+
+.pageHeader {
+  margin-bottom: 1.5rem;
+}
+
+.pageTitle {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2C2C2C;
+}
+
+.pageSubtitle {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #8A847A;
+}
+
+/* ---------- Hero (Home) ---------- */
+.hero {
+  background: linear-gradient(135deg, #FDF8F3 0%, #F5EDE4 100%);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #2C2C2C;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.heroSubtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #6B6B6B;
+  line-height: 1.5;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.9rem;
+  background: #fff;
+  border: 1.5px solid #E5DDD4;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #5A5A5A;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.chip:hover {
+  border-color: #C45C26;
+  color: #C45C26;
+  background: #FDF0E8;
+}
+
+/* ---------- Section ---------- */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2C2C2C;
+}
+
+.viewAll {
+  background: none;
+  border: none;
+  color: #C45C26;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.3rem 0;
+}
+
+.viewAll:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Empty page state ---------- */
+.emptyPage {
+  text-align: center;
+  padding: 4rem 1.5rem;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.emptyPage h2 {
+  margin: 0 0 0.5rem;
+  color: #2C2C2C;
+}
+
+.emptyPage p {
+  margin: 0 0 1.5rem;
+  color: #8A847A;
+  line-height: 1.5;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 1.25rem;
+  }
+
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+
+  .pageTitle {
+    font-size: 1.45rem;
+  }
+}
