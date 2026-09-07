@@ -16,7 +16,7 @@ export const recipesData = [
     cookTime: 20,
     servings: 4,
     image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=1qpPvIszSDU',
     audioUrl: '',
     tip: 'Let the batter rest 5 minutes for extra-fluffy pancakes.',
     ingredients: [
@@ -47,7 +47,7 @@ export const recipesData = [
     cookTime: 15,
     servings: 2,
     image: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=xdZ4oYzBOJg',
     audioUrl: '',
     tip: 'Add a splash of vinegar to the poaching water to help the egg whites set.',
     ingredients: [
@@ -75,7 +75,7 @@ export const recipesData = [
     cookTime: 10,
     servings: 2,
     image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=qPT0HsIRcLM',
     audioUrl: '',
     tip: 'Layer just before serving so the granola stays crunchy.',
     ingredients: [
@@ -103,7 +103,7 @@ export const recipesData = [
     cookTime: 25,
     servings: 4,
     image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=1Da_gFMv0hQ',
     audioUrl: '',
     tip: 'Rinse quinoa thoroughly to remove any bitterness.',
     ingredients: [
@@ -135,7 +135,7 @@ export const recipesData = [
     cookTime: 20,
     servings: 2,
     image: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=hGrFCaN1uJA',
     audioUrl: '',
     tip: 'Warm the tortilla briefly so it rolls without cracking.',
     ingredients: [
@@ -162,7 +162,7 @@ export const recipesData = [
     cookTime: 20,
     servings: 4,
     image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=kecPNzRwyrs',
     audioUrl: '',
     tip: 'Warm the tortillas in a dry skillet for better texture.',
     ingredients: [
@@ -193,7 +193,7 @@ export const recipesData = [
     cookTime: 30,
     servings: 3,
     image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=AQf7aRnvG0A',
     audioUrl: '',
     tip: 'Slice the chicken against the grain for maximum tenderness.',
     ingredients: [
@@ -225,7 +225,7 @@ export const recipesData = [
     cookTime: 25,
     servings: 4,
     image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=HzIwDB__UQ0',
     audioUrl: '',
     tip: 'Reserve pasta water – it helps the sauce cling to the noodles.',
     ingredients: [
@@ -255,7 +255,7 @@ export const recipesData = [
     cookTime: 25,
     servings: 4,
     image: 'https://images.unsplash.com/photo-1612874742237-99010731818c?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=k1Np28NnP40',
     audioUrl: '',
     tip: 'Remove the pan from heat before adding the egg mixture to avoid scrambling.',
     ingredients: [
@@ -284,7 +284,7 @@ export const recipesData = [
     cookTime: 25,
     servings: 4,
     image: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=Q3FzAu1AFHw',
     audioUrl: '',
     tip: 'Oil the grill grates well so the salmon skin doesn’t stick.',
     ingredients: [
@@ -313,7 +313,7 @@ export const recipesData = [
     cookTime: 40,
     servings: 4,
     image: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=mTJZravR5Js',
     audioUrl: '',
     tip: 'Cut vegetables into similar-sized pieces so they cook evenly.',
     ingredients: [
@@ -346,7 +346,7 @@ export const recipesData = [
     cookTime: 25,
     servings: 3,
     image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=RI5VE3IRjGc',
     audioUrl: '',
     tip: 'Press the tofu for 15 minutes first so it browns properly.',
     ingredients: [
@@ -378,7 +378,7 @@ export const recipesData = [
     cookTime: 25,
     servings: 24,
     image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=47hLJCK286U',
     audioUrl: '',
     tip: 'Chill the dough for 30 minutes for thicker, chewier cookies.',
     ingredients: [
@@ -410,7 +410,7 @@ export const recipesData = [
     cookTime: 30,
     servings: 6,
     image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=ZoNPpn1Gobg',
     audioUrl: '',
     tip: 'Use strong espresso and let the cups chill at least 4 hours.',
     ingredients: [
@@ -440,7 +440,7 @@ export const recipesData = [
     cookTime: 40,
     servings: 6,
     image: 'https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=kDZDYgaonjo',
     audioUrl: '',
     tip: 'Use a mix of frozen and fresh berries for the best texture.',
     ingredients: [
@@ -472,7 +472,7 @@ export const recipesData = [
     cookTime: 10,
     servings: 4,
     image: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=Nrqix4CF4Dw',
     audioUrl: '',
     tip: 'Leave the avocado pit in the bowl to help prevent browning.',
     ingredients: [
@@ -500,7 +500,7 @@ export const recipesData = [
     cookTime: 20,
     servings: 8,
     image: 'https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=xcz2LIvpMwI',
     audioUrl: '',
     tip: 'Stir halfway through roasting for even colour.',
     ingredients: [
@@ -527,7 +527,7 @@ export const recipesData = [
     cookTime: 15,
     servings: 6,
     image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80',
-    videoUrl: '',
+    videoUrl: 'https://www.youtube.com/watch?v=Ubs0ILhJ5dc',
     audioUrl: '',
     tip: 'Use the freshest mozzarella and basil you can find.',
     ingredients: [
