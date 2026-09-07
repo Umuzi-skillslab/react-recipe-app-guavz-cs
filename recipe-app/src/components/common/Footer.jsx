@@ -19,7 +19,7 @@ const Footer = () => {
         <div className={styles.footerBrand}>
           <div className={styles.footerLogo}>
             <span role="img" aria-hidden="true">👨‍🍳</span>
-            Recipe Hub
+            FlavorFolio
           </div>
           <p className={styles.footerTagline}>
             Discover recipes, plan weekly meals and cook with confidence.
@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.footerBottom}>
-        <span>© {currentYear} Recipe Hub. All rights reserved.</span>
+        <span>© {currentYear} FlavorFolio. All rights reserved.</span>
         <span>Capstone 3 · Recipe Discovery & Meal Planning App</span>
       </div>
     </footer>

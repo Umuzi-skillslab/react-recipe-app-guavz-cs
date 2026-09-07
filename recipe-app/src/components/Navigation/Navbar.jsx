@@ -49,7 +49,7 @@ const Navbar = ({ favoritesCount = 0 }) => {
           <span className={styles.brandIcon} role="img" aria-hidden="true">
             👨‍🍳
           </span>
-          <span className={styles.brandText}>Recipe Hub</span>
+          <span className={styles.brandText}>FlavorFolio</span>
         </Link>
 
         {/* Desktop links */}

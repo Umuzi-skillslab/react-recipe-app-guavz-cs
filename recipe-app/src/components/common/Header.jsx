@@ -22,7 +22,7 @@ const Header = () => {
         <span className={styles.logoIcon} role="img" aria-hidden="true">
           👨‍🍳
         </span>
-        <span className={styles.logoText}>Recipe Hub</span>
+        <span className={styles.logoText}>FlavorFolio</span>
       </Link>
 
       <div className={styles.headerRight}>

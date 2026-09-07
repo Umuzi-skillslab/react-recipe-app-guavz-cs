@@ -14,6 +14,23 @@ A modern, responsive React application built for a local cooking school partnere
 - React Router with active link styling and 404 page
 - Professional UI with CSS Modules, hover effects and smooth transitions
 
+## Screenshots
+
+### 1. Home
+![Home Page](./screenshots/Home.png)
+
+### 2. Recipes
+![Recipes Page](./screenshots/Recipe.png)
+
+### 3. Recipe Details
+![Recipe Detail Page](./screenshots/RecipeDetail.png)
+
+### 3. Favorites
+![Favorites Page](./screenshots/Favorites.png)
+
+### 4. Meal Plan
+![Meal Plan Page](./screenshots/MealPlanner.png)
+
 ## Technologies
 
 - React 18 (functional components + hooks only)
@@ -38,6 +55,8 @@ npm run build
 
 Open the URL shown in the terminal (usually http://localhost:5173).
 
+NB: Add recipe to favorites first before you can add to the meal plan. 
+
 ## Project Structure
 
 ```
@@ -55,12 +74,48 @@ src/
 └── main.jsx
 ```
 
-## State Management
+## Project Plan
 
-- **Lifted state** in `App.jsx`: `recipes`, `favorites`, `mealPlan`, `isLoading`
-- Local UI state (search, filters, modal) lives in the relevant page/component
-- `useEffect` × 4: load data, hydrate localStorage, persist favorites, persist meal plan
-- Immutable updates only (spread operators)
+### 1. Component Hierarchy
+
+`App` (root) owns shared state and routing. It renders `Navbar`, `Routes`, and `Footer`. Pages nest feature components, which further nest reusable UI pieces.
+
+### 2. Data Flow
+
+State is lifted to `App.jsx`. Data flows down as props, while events flow up via callback props. Sibling components such as `RecipeList` and `FavoritesPage` communicate through the shared parent state.
+
+### 3. Components List
+
+- **Navigation:** `Navbar`
+- **Recipe:** `RecipeCard`, `RecipeList`, `RecipeDetail`, `RecipeFilter`
+- **Meal Planner:** `MealPlanner`, `DayCard`
+- **Media:** `VideoPlayer`, `AudioPlayer`
+- **Reusable UI:** `Button`, `Card`, `SearchBar`, `Loading`, `Modal`
+- **Pages:** `Home`, `RecipesPage`, `MealPlannerPage`, `FavoritesPage`, `NotFound`
+- **Common:** `Header`, `Footer`
+- **Data:** `recipesData.js`
+
+### 4. Props Flow
+
+- `RecipeCard` receives `recipe` (object), `isFavorite` (boolean), `onFavoriteToggle` (function), and `onAddToPlan` (function).
+- `RecipeList` receives `recipes[]`, `favorites[]`, `onFavoriteToggle`, and `onSelect`.
+- `DayCard` receives `day` (string), `meals` (object), and `onRemoveMeal` (function).
+- `Button` receives `variant`, `children`, `onClick`, and `disabled` (with default parameters used).
+- `Card` and `Modal` use the `children` prop for composition.
+- Expressions are used as props, for example:
+  - `className={isFavorite ? styles.active : ''}`
+  - `style={{ opacity: loading ? 0.5 : 1 }}`
+
+### 5. State Management Strategy
+
+- **Lifted state in `App.jsx`:** `favorites` (array), `mealPlan` (object with Mon–Sun slots), and `recipes` (array loaded once).
+- **Local state:** `searchTerm`, `selectedCategory`, `selectedCuisine`, `isLoading`, and `showModal` are held in the relevant page/filter components.
+- **`useEffect` hooks:** 
+  1. Load `recipesData` on mount.
+  2. Hydrate `favorites` and `mealPlan` from `localStorage` on mount.
+  3. Persist `favorites` and `mealPlan` whenever they change.
+- **Persistence:** `localStorage` keys are `favorites` and `mealPlan`. `JSON.stringify` / `JSON.parse` are used with safe fallbacks.
+- **Updates:** Immutable patterns only — spread arrays/objects are used instead of direct mutation. This ensures correct re-renders and clean communication between sibling components.
 
 ## Routes
 
@@ -77,6 +132,7 @@ src/
 
 18 recipes covering:
 - Breakfast (3), Lunch (4), Dinner (5), Dessert (3), Snacks (3)
+- Video of the recipe might not be the exact same recipe writtent but for the purposes of this assignment I used a close match of a similar recipe from YouTube
 
 ## Future Enhancements
 
